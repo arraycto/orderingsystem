@@ -1,0 +1,18 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: configserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://www.github.com/zuichao3/orderingsystem.git # git 仓库地址
+          searchPaths: config # 仓库路径
+          username: zuichao3 # git 仓库用户名
+          password: zuichao_3 # git仓库密码
+      label: master # 仓库的分支
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
